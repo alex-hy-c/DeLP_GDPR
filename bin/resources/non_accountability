@@ -1,0 +1,38 @@
+~Accountability(X, R) -< DataController(X), ReportingMechanism(R), ~Report(X, R, "DataBreach").
+~Accountability(X, R) -< DataController(X), ReportingMechanism(R), ~Report(X, R, "DataBreach"), information_disclosure(I).
+~Accountability(X, R) -< DataController(X), ReportingMechanism(R), ~Report(X, R, "DataBreach"), SpoofingAttack(Z, X).
+~Accountability(X, R) -< DataController(X), ReportingMechanism(R), ~Report(X, R, "DataBreach"), ~ConsentCompliance(X, Y).
+~Accountability(Y, R) -< DataSubject(Y), ReportingMechanism(R), ~Complain(Y, R, "DataBreach").
+Accountability(X, R) -< DataController(X), ReportingMechanism(R), Report(X, R, "DataBreach").
+Accountability(Y, R) -< DataSubject(Y), ReportingMechanism(R), Complain(Y, R, "DataBreach").
+
+ReportSupervisoryAuthority(R, S) <-  ReportingMechanism(R), Report(R,S, "DataBreach").
+ReportSupervisoryAuthority(R, S) <-  ReportingMechanism(R), Complain(R,S, "DataBreach").
+ 
+SpoofingAttack(Z, X) -< Attacker(Z), DataController(X), access_online_services(Z, X).
+~SpoofingAttack(Z, X) -< ~impersonate(Z, Y).
+
+impersonate(Z, Y) <- Attacker(Z), DataSubject(Y).
+
+information_disclosure(I) -< privacy_breach(I), data_leak(I).
+~information_disclosure(I) -< PreserveConfidentiality(I).
+
+data_leak(I) <- accidental_exposure(I), sensitive_information(I).
+privacy_breach(I) <- planned_cyberattack(I), sensitive_information(I).
+
+ConsentCompliance(X, Y) -< DataSubject(Y), DataController(X), ConsentGiven(Y, X).
+~ConsentCompliance(X, Y) <- DataSubject(Y), DataController(X), ConsentGiven(Y, X), RevokeConsent(Y, X).
+
+DataSubject(patient).               
+DataController(telehealthserviceserver).           
+ReportingMechanism(reportingbody).
+~Report(telehealthserviceserver, reportingbody, "DataBreach").
+Complain(patient, reportingbody, "DataBreach").
+Attacker(jame).                      
+access_online_services(jame, telehealthserviceserver).
+sensitive_information(personal_data).
+accidental_exposure(personal_data).
+planned_cyberattack(personal_data).
+information_disclosure(personal_data).
+ConsentGiven(patient, telehealthserviceserver).
+RevokeConsent(patient, telehealthserviceserver).

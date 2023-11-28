@@ -162,15 +162,35 @@ public class DialecticalTree{
 
 	//Misc Methods
 
-	public String toString(){
-		StringBuilder s = new StringBuilder("["+argument);
-        if (!children.isEmpty())
-            s.append(" - ");
-        s.append(children.stream()
-                .map(Object::toString)
-                .collect(Collectors.joining(", ")));
-		s.append("]");
-		return s.toString();
-	}
+//	public String toString(){
+//		StringBuilder s = new StringBuilder("["+argument);
+//        if (!children.isEmpty())
+//            s.append(" - ");
+//        s.append(children.stream()
+//                .map(Object::toString)
+//                .collect(Collectors.joining(", ")));
+//		s.append("]");
+//		return s.toString();
+//	}
+	
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        buildString(s, "", true);
+        return s.toString();
+    }
+
+    // Helper method to build the string representation
+    private void buildString(StringBuilder s, String prefix, boolean isTail) {
+        s.append(prefix).append(isTail ? "└── " : "├── ").append(argument).append("[").append(getMarking()).append("]").append("\n");
+        ArrayList<DialecticalTree> childrenList = new ArrayList<>(children);
+        for (int i = 0; i < childrenList.size() - 1; i++) {
+            childrenList.get(i).buildString(s, prefix + (isTail ? "    " : "│   "), false);
+        }
+        if (childrenList.size() > 0) {
+            childrenList.get(childrenList.size() - 1)
+                    .buildString(s, prefix + (isTail ? "    " : "│   "), true);
+        }
+    }
+	
 
 }

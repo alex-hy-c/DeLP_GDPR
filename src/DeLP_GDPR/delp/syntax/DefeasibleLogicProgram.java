@@ -41,6 +41,8 @@ import DeLP_GDPR.logics.fol.syntax.FolSignature;
  *
  */
 public class DefeasibleLogicProgram extends BeliefSet<DelpRule,FolSignature>{
+	
+	private Set<DelpArgument> arguments;
 
 	/**
 	 * Default constructor; initializes empty delpFacts, strict and defeasible rules
@@ -114,6 +116,9 @@ public class DefeasibleLogicProgram extends BeliefSet<DelpRule,FolSignature>{
 	public Set<DelpArgument> getArguments(){
 		if(!this.isGround())
 			throw new IllegalArgumentException("This program must be grounded first before computing arguments.");
+		if(this.arguments != null) {
+			return this.arguments;
+		}
 		Set<Derivation<DelpRule>> derivations = Derivation.allDerivations(this);
 		Set<DelpArgument> arguments = new HashSet<>();
 		for(Derivation<DelpRule> derivation: derivations){
@@ -137,6 +142,7 @@ public class DefeasibleLogicProgram extends BeliefSet<DelpRule,FolSignature>{
 			}
 			if(is_minimal) result.add(argument1);
 		}
+		this.arguments = result;
 		return result;
 	}
 
