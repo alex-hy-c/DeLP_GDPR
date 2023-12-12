@@ -3,7 +3,7 @@ Compliant(Controller, Subject) -< DataSubject(Subject), DataController(Controlle
 
 %Valid Consent
 
-ValidConsent(C,S) <- DataSubject(S), DataController(C), UnambiguousConsent(C,S), SpecifiedAndInformedConsent(C,S).
+ValidConsent(C,S) <- DataSubject(S), DataController(C), UnambiguousConsent(C,S), SpecifiedAndInformedConsent(C,S), FreelyGivenConsent(C,S), ~WithdrawnConsent(C,S).
 
 ~ValidConsent(C,S) <- DataSubject(S), DataController(C), ~GivenConsent(C,S).
 ~ValidConsent(C,S) <- DataSubject(S), DataController(C), ~UnambiguousConsent(C,S).

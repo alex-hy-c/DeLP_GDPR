@@ -1,1 +1,3 @@
-ValidConsent(fitbit,user1)
+Compliant(fitbit,user1)
+~Compliant(fitbit,user1)
+Undecided(fitbit,user1)

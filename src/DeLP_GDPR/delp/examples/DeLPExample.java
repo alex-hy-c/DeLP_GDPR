@@ -28,7 +28,7 @@ public class DeLPExample {
 		DelpReasoner reasoner = new DelpReasoner(new GeneralizedSpecificity());
 		FileWriter resultWriter = new FileWriter("results.txt", true);
 		BufferedWriter writer = new BufferedWriter(resultWriter);
-		File file = new File("bin/resources/consent.txt");//birds      consent.txt
+		File file = new File("bin/resources/consent_temp.txt");//birds      consent.txt
 		System.out.println("Processing this Knowledge-base: " + file.getPath());
 		writer.write("---Knowledge Base test-case: " + file.getName() + "---");
 		writer.newLine();
@@ -45,7 +45,7 @@ public class DeLPExample {
 			writer.write("Query to Knowledge base: " + queryString);
 			writer.newLine();
 			String result;
-			for (int j = 1; j <= 1; j++) {
+			for (int j = 1; j <= 10; j++) {
 				long startTime = System.currentTimeMillis();
 				result = reasoner.query(delp, query).toString();
 				long endTime = System.currentTimeMillis();

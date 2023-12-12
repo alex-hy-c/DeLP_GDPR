@@ -1,0 +1,59 @@
+---Knowledge Base test-case: consent_temp.txt---
+Query to Knowledge base: Compliant(fitbit,user1)
+ Run: 1 YES Execution Time: 161
+ Run: 2 YES Execution Time: 29
+ Run: 3 YES Execution Time: 24
+ Run: 4 YES Execution Time: 23
+ Run: 5 YES Execution Time: 24
+ Run: 6 YES Execution Time: 19
+ Run: 7 YES Execution Time: 18
+ Run: 8 YES Execution Time: 20
+ Run: 9 YES Execution Time: 17
+ Run: 10 YES Execution Time: 18
+Query to Knowledge base: ~Compliant(fitbit,user1)
+ Run: 1 NO Execution Time: 18
+ Run: 2 NO Execution Time: 16
+ Run: 3 NO Execution Time: 13
+ Run: 4 NO Execution Time: 13
+ Run: 5 NO Execution Time: 11
+ Run: 6 NO Execution Time: 12
+ Run: 7 NO Execution Time: 12
+ Run: 8 NO Execution Time: 13
+ Run: 9 NO Execution Time: 12
+ Run: 10 NO Execution Time: 12
+---End of test-cases---
+---Knowledge Base test-case: consent_temp.txt---
+Query to Knowledge base: Compliant(fitbit,user1)
+ Run: 1 YES Execution Time: 571
+ Run: 2 YES Execution Time: 30
+ Run: 3 YES Execution Time: 20
+ Run: 4 YES Execution Time: 32
+ Run: 5 YES Execution Time: 22
+ Run: 6 YES Execution Time: 19
+ Run: 7 YES Execution Time: 17
+ Run: 8 YES Execution Time: 15
+ Run: 9 YES Execution Time: 12
+ Run: 10 YES Execution Time: 13
+Query to Knowledge base: ~Compliant(fitbit,user1)
+ Run: 1 NO Execution Time: 13
+ Run: 2 NO Execution Time: 12
+ Run: 3 NO Execution Time: 13
+ Run: 4 NO Execution Time: 13
+ Run: 5 NO Execution Time: 13
+ Run: 6 NO Execution Time: 13
+ Run: 7 NO Execution Time: 13
+ Run: 8 NO Execution Time: 13
+ Run: 9 NO Execution Time: 11
+ Run: 10 NO Execution Time: 13
+Query to Knowledge base: Undecided(fitbit,user1)
+ Run: 1 UNDECIDED Execution Time: 14
+ Run: 2 UNDECIDED Execution Time: 9
+ Run: 3 UNDECIDED Execution Time: 8
+ Run: 4 UNDECIDED Execution Time: 8
+ Run: 5 UNDECIDED Execution Time: 8
+ Run: 6 UNDECIDED Execution Time: 9
+ Run: 7 UNDECIDED Execution Time: 8
+ Run: 8 UNDECIDED Execution Time: 8
+ Run: 9 UNDECIDED Execution Time: 8
+ Run: 10 UNDECIDED Execution Time: 9
+---End of test-cases---
