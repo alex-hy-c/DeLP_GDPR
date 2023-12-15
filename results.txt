@@ -42,3 +42,7 @@ Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
 Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
  Run: 1 NO Execution Time: 83
 ---End of test-cases---
+---Knowledge Base test-case: complex.txt---
+Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
+ Run: 1 NO Execution Time: 94
+---End of test-cases---

@@ -28,7 +28,7 @@ public class DeLPExample {
 		DelpReasoner reasoner = new DelpReasoner(new GeneralizedSpecificity());
 		FileWriter resultWriter = new FileWriter("results.txt", true);
 		BufferedWriter writer = new BufferedWriter(resultWriter);
-		File file = new File("bin/resources/complex.txt");//birds      consent.txt
+		File file = new File("knowledge_base/complex.txt");//birds      consent.txt
 		System.out.println("Processing this Knowledge-base: " + file.getPath());
 		writer.write("---Knowledge Base test-case: " + file.getName() + "---");
 		writer.newLine();
