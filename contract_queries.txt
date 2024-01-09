@@ -1,0 +1,2 @@
+ValidContract(fitbit,user1)
+ValidContract(fitbit,user2)

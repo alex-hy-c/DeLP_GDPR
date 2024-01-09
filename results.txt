@@ -1,48 +1,162 @@
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
- Run: 1 YES Execution Time: 43
+---Knowledge Base test-case: contract.txt---
+Query to Knowledge base: ValidContract(fitbit,user1)
+ Run: 1 YES Execution Time: 97
+Query to Knowledge base: ValidContract(fitbit,user2)
+ Run: 1 NO Execution Time: 29
 ---End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
+---Knowledge Base test-case: legal_obligation.txt---
+---End of test-cases---
+---Knowledge Base test-case: legal_obligation.txt---
+Query to Knowledge base: LegalObligation(fitbit)
+ Run: 1 YES Execution Time: 49
+Query to Knowledge base: LegalObligation(fitbit2)
+ Run: 1 NO Execution Time: 6
+---End of test-cases---
+---Knowledge Base test-case: legal_obligation.txt---
+Query to Knowledge base: LegalObligation(fitbit)
+ Run: 1 YES Execution Time: 40
+Query to Knowledge base: LegalObligation(fitbit2)
+ Run: 1 NO Execution Time: 6
+---End of test-cases---
+---Knowledge Base test-case: legal_obligation.txt---
+Query to Knowledge base: LegalObligation(fitbit)
+ Run: 1 YES Execution Time: 36
+Query to Knowledge base: LegalObligation(fitbit2)
+ Run: 1 NO Execution Time: 5
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 32
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 109
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 50
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 49
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 48
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 50
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 140
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 120
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 120
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 117
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 266
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 103
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 126
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 51
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
  Run: 1 YES Execution Time: 47
 ---End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
- Run: 1 YES Execution Time: 760
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 124
 ---End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
- Run: 1 YES Execution Time: 2654
----End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
- Run: 1 YES Execution Time: 10267
----End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
- Run: 1 YES Execution Time: 260
----End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
- Run: 1 YES Execution Time: 11865
----End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
- Run: 1 YES Execution Time: 71880
----End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
  Run: 1 YES Execution Time: 36
 ---End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
- Run: 1 YES Execution Time: 78
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 46
 ---End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
- Run: 1 NO Execution Time: 83
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 70
 ---End of test-cases---
----Knowledge Base test-case: complex.txt---
-Query to Knowledge base: SpecifiedAndInformedConsent(fitbit,user1)
- Run: 1 NO Execution Time: 94
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 172
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 719
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 2912
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 70349
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 39
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 37
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 35
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 45
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 42
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 58
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 65
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 69
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 3623
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 107
+---End of test-cases---
+---Knowledge Base test-case: derivation_experiment.txt---
+Query to Knowledge base: A(fitbit,user1)
+ Run: 1 YES Execution Time: 472
 ---End of test-cases---

@@ -79,7 +79,7 @@ public class Derivation<T extends Rule<?, ?>> extends ArrayList<T> {
 		// B - being the set of all formulas that have to be proven
 		// C - being the set of rules that can be used to construct the rest of the
 		// derivation
-		///System.out.println("---allDerivationsCalled---\n");
+		System.out.println("---allDerivationsCalled---\n");
 		Stack<Triple<List<S>, Set<Formula>, RuleSet<S>>> stack = new Stack<Triple<List<S>, Set<Formula>, RuleSet<S>>>();
 		Triple<List<S>, Set<Formula>, RuleSet<S>> initial = new Triple<List<S>, Set<Formula>, RuleSet<S>>();
 		initial.setFirst(new ArrayList<S>());
@@ -93,22 +93,20 @@ public class Derivation<T extends Rule<?, ?>> extends ArrayList<T> {
 		int derivationsNum = 0;
 		while (!stack.isEmpty()) {
 			whilecount++;
-			//System.out.println(whilecount);
+			System.out.println(whilecount);
 			Triple<List<S>, Set<Formula>, RuleSet<S>> derivation = stack.pop();
-//			System.out.println("Current derivation: "+derivation.getFirst());
-//			System.out.println("To be proven: "+ derivation.getSecond());
-//			System.out.println("Can be used: "+derivation.getThird()+"\n");
+			System.out.println("Current derivation: "+derivation.getFirst());
+			System.out.println("To be proven: "+ derivation.getSecond());
+			System.out.println("Can be used: "+derivation.getThird()+"\n");
 			if (derivation.getSecond().isEmpty()) {//If no more needs to be proved, add current derivation as a derivation
 				derivationsNum++;
 				derivations.add(new Derivation<S>(derivation.getFirst()));
-//				System.out.println(derivation.getFirst());
-//				System.out.println("derivation number " + derivationsNum + " added.\n\n");
+				System.out.println(derivation.getFirst());
+			System.out.println("derivation number " + derivationsNum + " added.\n\n");
 			} 
 			else {
 				for (Formula f : derivation.getSecond()) {
-					//System.out.println("\n\t"+f+"\n");
 					for (S r : derivation.getThird().getRulesWithConclusion(f)) {
-						//System.out.println("for2");
 						Triple<List<S>, Set<Formula>, RuleSet<S>> newDerivation = new Triple<List<S>, Set<Formula>, RuleSet<S>>();
 						newDerivation.setFirst(new ArrayList<S>(derivation.getFirst()));
 						newDerivation.getFirst().add(r);
@@ -117,9 +115,6 @@ public class Derivation<T extends Rule<?, ?>> extends ArrayList<T> {
 						newDerivation.getSecond().addAll(r.getPremise());
 						newDerivation.setThird(new RuleSet<S>(derivation.getThird()));
 						newDerivation.getThird().removeAll(derivation.getThird().getRulesWithConclusion(f));
-//						System.out.println("\t\tNEW: Current derivation: " + newDerivation.getFirst());
-//						System.out.println("\t\tNEW: To be proven: "+ newDerivation.getSecond());
-//						System.out.println("\t\tNEW: Can be used: " + newDerivation.getThird()+"\n");
 						// Check whether we added an element to the second
 						// component that is already derived from a rule in the first component.
 						// In that case we have a cycle and the derivation cannot be completed.
@@ -138,7 +133,7 @@ public class Derivation<T extends Rule<?, ?>> extends ArrayList<T> {
 				}
 			}
 		}
-		//System.out.println("Conclusion: "+conclusion+"\nDerivations: "+derivations+"\n\n--------\n\n");
+		System.out.println("Conclusion: "+conclusion+"\nDerivations: "+derivations+"\n\n--------\n\n");
 		return derivations;
 	}
 

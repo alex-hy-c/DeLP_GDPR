@@ -1,0 +1,2 @@
+StorageLimitation(fitbit1)
+StorageLimitation(fitbit2)

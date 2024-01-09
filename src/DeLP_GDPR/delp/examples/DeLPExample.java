@@ -23,19 +23,20 @@ import DeLP_GDPR.logics.fol.syntax.FolFormula;
  * 
  * Doesn't handle unknown
  */
+
 public class DeLPExample {
 	public static void main(String[] args) throws FileNotFoundException, ParserException, IOException {
 		DelpReasoner reasoner = new DelpReasoner(new GeneralizedSpecificity());
 		FileWriter resultWriter = new FileWriter("results.txt", true);
 		BufferedWriter writer = new BufferedWriter(resultWriter);
-		File file = new File("knowledge_base/complex.txt");//birds      consent.txt
+		File file = new File("knowledge_base/derivation_experiment.txt");//birds      consent.txt
 		System.out.println("Processing this Knowledge-base: " + file.getPath());
 		writer.write("---Knowledge Base test-case: " + file.getName() + "---");
 		writer.newLine();
 		DelpParser parser = new DelpParser();
 		DefeasibleLogicProgram delp = parser.parseBeliefBaseFromFile(file.getAbsolutePath()); // DeLPExample.class.getResource(filePath).getFile()
 
-		File QueryFile = new File("consent_queries.txt");// All queries in this file. Each line is a separate query
+		File QueryFile = new File("experiment_queries.txt");// All queries in this file. Each line is a separate query
 		ArrayList<String> Queries = new QueryReader(QueryFile.getAbsolutePath()).getQueries();
 
 		for (int i = 0; i < Queries.size(); i++) { // Conducting 10 tests for each case
@@ -46,10 +47,11 @@ public class DeLPExample {
 			writer.newLine();
 			String result;
 			for (int j = 1; j <= 1; j++) {
-				long startTime = System.currentTimeMillis();
+				result = null;
+				long startTime = System.nanoTime();
 				result = reasoner.query(delp, query).toString();
-				long endTime = System.currentTimeMillis();
-				long executionTime = endTime - startTime;
+				long endTime = System.nanoTime();
+				long executionTime = (endTime - startTime) / 1000000;
 				// Write the result to file
 				writer.write(" Run: " + j + " " + result + " Execution Time: " + executionTime);
 				writer.newLine();

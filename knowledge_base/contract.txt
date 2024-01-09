@@ -1,0 +1,42 @@
+Valid(C,S) -< DataSubject(S), DataController(C).
+
+ValidContract(C,S) -< DataSubject(S), DataController(C).
+~ValidContract(C,S) <- ~ContractAccepted(C,S).
+
+
+ContractAccepted(C,S) -< DataSubject(S), DataController(C).
+~ContractAccepted(C,S) <- ~Negotiated(C,S).
+~ContractAccepted(C,S) <- ~Offer(C,S).
+~ContractAccepted(C,S) <- ~OfferAccepted(C,S). 
+
+Offer(C,S) -< DataSubject(S), DataController(C).
+~Offer(C,S) <- ~Signature(C,S).
+~Offer(C,S) <- ~hasEffectiveDate(C,S).
+~Offer(C,S) <- ~hasEndDate(C,S).
+~Offer(C,S) <- ~hasTAC(C,S).
+~Offer(C,S) <- ~hasMinimumDuration(C,S).
+
+%FitBit
+DataController(fitbit).
+
+%User 1 (Yes)
+DataSubject(user1).
+hasMinimumDuration(fitbit,user1).
+hasTAC(fitbit,user1).
+hasEndDate(fitbit,user1).
+hasEffectiveDate(fitbit,user1).
+Signature(fitbit,user1).
+OfferAccepted(fitbit,user1).
+
+%User 2 (No)
+DataSubject(user2).
+hasMinimumDuration(fitbit,user2).
+hasTAC(fitbit,user2).
+hasEndDate(fitbit,user2).
+hasEffectiveDate(fitbit,user2).
+Signature(fitbit,user2).
+~OfferAccepted(fitbit,user2).
+
+
+
+

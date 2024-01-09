@@ -1,0 +1,36 @@
+A(C,S) -< B(C,S),C(C,S),D(C,S).
+B(C,S)-<E(C,S).
+E(C,S)-<F(C,S).
+F(C,S)-<G(C,S).
+G(C,S) -< H(C,S).
+H(C,S) -< I(C,S).
+I(C,S) -< J(C,S).
+J(C,S) -< K(C,S).
+K(C,S) -< L(C,S).
+L(C,S) -< M(C,S).
+M(C,S) -< N(C,S).
+N(C,S) -< O(C,S).
+O(C,S) -< P(C,S).
+P(C,S) -< Q(C,S).
+Q(C,S) -< R(C,S).
+R(C,S) -< S(C,S).
+S(C,S) -< T(C,S).
+T(C,S) -< U(C,S).
+U(C,S) -< V(C,S).
+V(C,S) -< W(C,S).
+W(C,S) -< X(C,S).
+X(C,S) -< Y(C,S).
+Y(C,S) -< Z(C,S).
+
+%E(C,S),F(C,S),G(C,S),H(C,S),I(C,S).
+
+
+DataSubject(user1).
+DataController(fitbit).
+
+Z(fitbit, user1).
+
+
+
+
+

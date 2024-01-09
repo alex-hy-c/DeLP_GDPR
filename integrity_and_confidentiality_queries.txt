@@ -1,0 +1,2 @@
+LegalObligation(fitbit)
+LegalObligation(fitbit2)

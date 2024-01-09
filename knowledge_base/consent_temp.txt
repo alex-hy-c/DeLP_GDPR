@@ -46,7 +46,7 @@ FreelyGivenConsent(C,S) -< DataSubject(S), DataController(C).
 DataController(fitbit).
 ~ConsentConditionOfService(fitbit).
 
-%Patient 1 (Yes)
+%User 1 (Yes)
 DataSubject(user1).
 GivenConsent(fitbit,user1).
 ConsentInput(fitbit,user1,"Tickbox").
@@ -56,7 +56,7 @@ ShowsProcessingActivities(fitbit,user1).
 RightToWithdrawConsent(fitbit,user1).
 ~WithdrawnConsent(fitbit,user1).
 
-%Patient 2 (No)
+%User 2 (No)
 DataSubject(user2).
 ~GivenConsent(fitbit,user2).
 ConsentInput(fitbit,user2,"Tickbox").
@@ -66,7 +66,7 @@ ShowsProcessingActivities(fitbit,user2).
 RightToWithdrawConsent(fitbit,user2).
 ~WithdrawnConsent(fitbit,user2).
 
-%Patient 3 (Undecided)
+%User 3 (Undecided)
 %DataSubject(user3).
 %GivenConsent(fitbit,user3).
 %ConsentInput(fitbit,user3,"Tickbox").

@@ -1,0 +1,15 @@
+~LegalObligation(C) -< DataController(C).
+LegalObligation(C) <- PayrollData(C).
+LegalObligation(C) <- CourtSubpoena(C).
+LegalObligation(C) <- AML(C).
+
+AML(C) <- FinancialInstitution(C).
+
+
+%Controller 1 (Yes)
+DataController(fitbit).
+CourtSubpoena(fitbit).
+
+%Controller 2 (No).
+DataController(fitbit2).
+

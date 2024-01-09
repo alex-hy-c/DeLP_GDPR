@@ -1,0 +1,2 @@
+LegalObligation(fitbit,user1)
+LegalObligation(fitbit,user2)
