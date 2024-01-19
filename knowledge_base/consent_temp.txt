@@ -52,9 +52,10 @@ GivenConsent(fitbit,user1).
 ConsentInput(fitbit,user1,"Tickbox").
 ShowsControllerIdentity(fitbit,user1).
 ShowsProcessingPurpose(fitbit,user1).
-ShowsProcessingActivities(fitbit,user1).
+~ShowsProcessingActivities(fitbit,user1).
 RightToWithdrawConsent(fitbit,user1).
 ~WithdrawnConsent(fitbit,user1).
+SpecifiedAndInformedConsent(fitbit,user1).
 
 %User 2 (No)
 DataSubject(user2).

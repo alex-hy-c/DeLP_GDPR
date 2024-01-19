@@ -130,3 +130,31 @@ B(fitbit,user1) -< E(fitbit,user1)., E(fitbit,user1)
 n = number of rules
 m = horizontal complexity
 n^m
+
+
+1
+Current derivation: []
+To be proven: [A(fitbit,user1)]
+
+2
+Current derivation: [A(fitbit,user1) -< B(fitbit,user1),D(fitbit,user1),C(fitbit,user1).]
+
+
+3
+Current derivation: [A(fitbit,user1) -< B(fitbit,user1),D(fitbit,user1),C(fitbit,user1)., B(fitbit,user1) -< E(fitbit,user1).]
+
+
+4
+Current derivation: [A(fitbit,user1) -< B(fitbit,user1),D(fitbit,user1),C(fitbit,user1)., B(fitbit,user1) -< E(fitbit,user1)., E(fitbit,user1) -< F(fitbit,user1).]
+
+
+5
+Current derivation: [A(fitbit,user1) -< B(fitbit,user1),D(fitbit,user1),C(fitbit,user1)., B(fitbit,user1) -< E(fitbit,user1)., E(fitbit,user1) -< F(fitbit,user1)., F(fitbit,user1) -< G(fitbit,user1).]
+
+
+6
+Current derivation: [A(fitbit,user1) -< B(fitbit,user1),D(fitbit,user1),C(fitbit,user1)., B(fitbit,user1) -< E(fitbit,user1)., E(fitbit,user1) -< F(fitbit,user1)., F(fitbit,user1) -< G(fitbit,user1)., G(fitbit,user1).]
+
+
+Conclusion: A(fitbit,user1)
+Derivations: []

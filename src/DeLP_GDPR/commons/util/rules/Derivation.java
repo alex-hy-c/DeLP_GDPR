@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -79,7 +80,8 @@ public class Derivation<T extends Rule<?, ?>> extends ArrayList<T> {
 		// B - being the set of all formulas that have to be proven
 		// C - being the set of rules that can be used to construct the rest of the
 		// derivation
-		System.out.println("---allDerivationsCalled---\n");
+		//System.out.println("---allDerivationsCalled---\n");
+		Set<String> set = new HashSet<String>();
 		Stack<Triple<List<S>, Set<Formula>, RuleSet<S>>> stack = new Stack<Triple<List<S>, Set<Formula>, RuleSet<S>>>();
 		Triple<List<S>, Set<Formula>, RuleSet<S>> initial = new Triple<List<S>, Set<Formula>, RuleSet<S>>();
 		initial.setFirst(new ArrayList<S>());
@@ -89,20 +91,15 @@ public class Derivation<T extends Rule<?, ?>> extends ArrayList<T> {
 		initial.setThird(new RuleSet<S>(rules));
 		stack.add(initial);
 		Set<Derivation<S>> derivations = new HashSet<Derivation<S>>();
-		int whilecount = 0;
-		int derivationsNum = 0;
 		while (!stack.isEmpty()) {
-			whilecount++;
-			System.out.println(whilecount);
 			Triple<List<S>, Set<Formula>, RuleSet<S>> derivation = stack.pop();
-			System.out.println("Current derivation: "+derivation.getFirst());
-			System.out.println("To be proven: "+ derivation.getSecond());
-			System.out.println("Can be used: "+derivation.getThird()+"\n");
+			//System.out.println("Current derivation: "+derivation.getFirst());
+			//System.out.println("To be proven: "+ derivation.getSecond());
+			//System.out.println("Can be used: "+derivation.getThird()+"\n");
 			if (derivation.getSecond().isEmpty()) {//If no more needs to be proved, add current derivation as a derivation
-				derivationsNum++;
 				derivations.add(new Derivation<S>(derivation.getFirst()));
-				System.out.println(derivation.getFirst());
-			System.out.println("derivation number " + derivationsNum + " added.\n\n");
+				//System.out.println(derivation.getFirst());
+			//System.out.println("derivation number " + derivationsNum + " added.\n\n");
 			} 
 			else {
 				for (Formula f : derivation.getSecond()) {
@@ -133,7 +130,7 @@ public class Derivation<T extends Rule<?, ?>> extends ArrayList<T> {
 				}
 			}
 		}
-		System.out.println("Conclusion: "+conclusion+"\nDerivations: "+derivations+"\n\n--------\n\n");
+		//System.out.println("Conclusion: "+conclusion+"\nDerivations: "+derivations+"\n\n--------\n\n");
 		return derivations;
 	}
 

@@ -1,1 +1,1 @@
-SpecifiedAndInformedConsent(fitbit,user1)
+ValidConsent(fitbit,user1)

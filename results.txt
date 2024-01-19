@@ -1,162 +1,90 @@
----Knowledge Base test-case: contract.txt---
-Query to Knowledge base: ValidContract(fitbit,user1)
- Run: 1 YES Execution Time: 97
-Query to Knowledge base: ValidContract(fitbit,user2)
- Run: 1 NO Execution Time: 29
----End of test-cases---
----Knowledge Base test-case: legal_obligation.txt---
----End of test-cases---
----Knowledge Base test-case: legal_obligation.txt---
-Query to Knowledge base: LegalObligation(fitbit)
- Run: 1 YES Execution Time: 49
-Query to Knowledge base: LegalObligation(fitbit2)
- Run: 1 NO Execution Time: 6
----End of test-cases---
----Knowledge Base test-case: legal_obligation.txt---
-Query to Knowledge base: LegalObligation(fitbit)
- Run: 1 YES Execution Time: 40
-Query to Knowledge base: LegalObligation(fitbit2)
- Run: 1 NO Execution Time: 6
----End of test-cases---
----Knowledge Base test-case: legal_obligation.txt---
-Query to Knowledge base: LegalObligation(fitbit)
- Run: 1 YES Execution Time: 36
-Query to Knowledge base: LegalObligation(fitbit2)
- Run: 1 NO Execution Time: 5
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 32
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 109
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 50
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 49
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 48
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 50
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 140
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 120
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 120
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 117
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 266
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 103
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 126
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 51
----End of test-cases---
 ---Knowledge Base test-case: derivation_experiment.txt---
 Query to Knowledge base: A(fitbit,user1)
  Run: 1 YES Execution Time: 47
----End of test-cases---
+ Run: 2 YES Execution Time: 4
+ Run: 3 YES Execution Time: 4
+ Run: 4 YES Execution Time: 3
+ Run: 5 YES Execution Time: 2
+ Run: 6 YES Execution Time: 2
+ Run: 7 YES Execution Time: 2
+ Run: 8 YES Execution Time: 2
+ Run: 9 YES Execution Time: 2
+ Run: 10 YES Execution Time: 2
+Mean:2Standard Deviation:1---End of test-cases---
 ---Knowledge Base test-case: derivation_experiment.txt---
 Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 124
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 36
+ Run: 1 YES Execution Time: 49
+ Run: 2 YES Execution Time: 5
+ Run: 3 YES Execution Time: 5
+ Run: 4 YES Execution Time: 3
+ Run: 5 YES Execution Time: 3
+ Run: 6 YES Execution Time: 3
+ Run: 7 YES Execution Time: 3
+ Run: 8 YES Execution Time: 2
+ Run: 9 YES Execution Time: 2
+ Run: 10 YES Execution Time: 2
+Mean:3
+Standard Deviation:1
 ---End of test-cases---
 ---Knowledge Base test-case: derivation_experiment.txt---
 Query to Knowledge base: A(fitbit,user1)
  Run: 1 YES Execution Time: 46
+ Run: 2 YES Execution Time: 4
+ Run: 3 YES Execution Time: 4
+ Run: 4 YES Execution Time: 3
+ Run: 5 YES Execution Time: 3
+ Run: 6 YES Execution Time: 2
+ Run: 7 YES Execution Time: 2
+ Run: 8 YES Execution Time: 2
+ Run: 9 YES Execution Time: 2
+ Run: 10 YES Execution Time: 2
+Mean: 2milliseconds
+Standard Deviation: 1
 ---End of test-cases---
 ---Knowledge Base test-case: derivation_experiment.txt---
 Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 70
+ Run: 1 YES Execution Time: 47
+ Run: 2 YES Execution Time: 5
+ Run: 3 YES Execution Time: 4
+ Run: 4 YES Execution Time: 3
+ Run: 5 YES Execution Time: 3
+ Run: 6 YES Execution Time: 2
+ Run: 7 YES Execution Time: 2
+ Run: 8 YES Execution Time: 2
+ Run: 9 YES Execution Time: 2
+ Run: 10 YES Execution Time: 2
+Mean: 2 milliseconds
+Standard Deviation: 1
 ---End of test-cases---
 ---Knowledge Base test-case: derivation_experiment.txt---
 Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 172
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 719
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 2912
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 70349
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 39
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 37
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 35
+ Run: 1 YES Execution Time: 46
+ Run: 2 YES Execution Time: 4
+ Run: 3 YES Execution Time: 4
+ Run: 4 YES Execution Time: 3
+ Run: 5 YES Execution Time: 3
+ Run: 6 YES Execution Time: 2
+ Run: 7 YES Execution Time: 2
+ Run: 8 YES Execution Time: 2
+ Run: 9 YES Execution Time: 2
+ Run: 10 YES Execution Time: 2
+First run ignored
+Mean: 2 milliseconds
+Standard Deviation: 1
 ---End of test-cases---
 ---Knowledge Base test-case: derivation_experiment.txt---
 Query to Knowledge base: A(fitbit,user1)
  Run: 1 YES Execution Time: 45
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 42
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 58
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 65
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 69
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 3623
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 107
----End of test-cases---
----Knowledge Base test-case: derivation_experiment.txt---
-Query to Knowledge base: A(fitbit,user1)
- Run: 1 YES Execution Time: 472
+ Run: 2 YES Execution Time: 4
+ Run: 3 YES Execution Time: 4
+ Run: 4 YES Execution Time: 3
+ Run: 5 YES Execution Time: 3
+ Run: 6 YES Execution Time: 2
+ Run: 7 YES Execution Time: 2
+ Run: 8 YES Execution Time: 2
+ Run: 9 YES Execution Time: 2
+ Run: 10 YES Execution Time: 2
+First run ignored
+Mean: 2.6666666666666665 milliseconds
+Standard Deviation: 0.8164965809277261
 ---End of test-cases---

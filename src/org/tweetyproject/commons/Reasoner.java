@@ -1,5 +1,7 @@
 package org.tweetyproject.commons;
 
+import java.io.IOException;
+
 /*
  *  This file is part of "TweetyProject", a collection of Java libraries for
  *  logical aspects of artificial intelligence and knowledge representation.
