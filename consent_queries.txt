@@ -1,1 +1,0 @@
-ValidConsent(fitbit,user1)

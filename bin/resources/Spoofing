@@ -1,9 +1,0 @@
-DataSubject(patient).               
-DataController(telehealthserviceserver).         
-Attacker(jame).                      
-access_online_services(jame, telehealthserviceserver).  
-
-SpoofingAttack(Z, Y) -< Attacker(Z), DataController(Y), access_online_services(Z, Y).
-~SpoofingAttack(Z, Y) -< ~impersonate(Z, X).
-
-impersonate(Z, X) <- Attacker(Z), DataSubject(X).
