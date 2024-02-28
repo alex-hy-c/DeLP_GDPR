@@ -1,0 +1,37 @@
+AccuracyCompliance(X, Y) -< DataSubject(Y), DataController(X), AccurateData(X, Y).
+~AccuracyCompliance(X, Y) -< ~DataNoLongerNecessary(X, Y).
+
+~AccuracyCompliance(X, Y) <- ~ErasedInaccurateData(X, Y).
+ErasedInaccurateData(X, Y)-< WrongDataRecorded(X, Y).
+WrongDataRecorded(X, Y) <- DataNoLongerNecessary(X, Y).
+
+~AccuracyCompliance(X, Y) <- ~RectifiedInaccurateData(X, Y).
+RectifiedInaccurateData(X, Y) <- IncompleteDataCompleted(X, Y).
+RectifiedInaccurateData(X, Y) <- CorrectData(X, Y).
+ 
+~AccuracyCompliance(X, Y) <- ~UpdateRecord(X, Y).
+UpdateRecord(X, Y) <- ContactDetails(Y).
+UpdateRecord(X, Y) <- Address(Y).
+UpdateRecord(X, Y) <- PersonalInformaiton(Y).
+
+~AccuracyCompliance(X, Y) <- ~AccurateRecord(X, Y).
+AccurateRecord(X, Y) <- RecordMistakes(X, Y).
+AccurateRecord(X, Y) <- RecordOpinion(X, Y).
+
+~AccuracyCompliance(X, Y) <- ~AccurateOnTime(X, Y).
+AccurateOnTime(X, Y) -< UndueDelay(X, Y).
+UndueDelay(X, Y) <- MinimumOneMonth(X, Y).
+
+
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+AccurateData(telehealthserviceserver, patient1).
+~ErasedInaccurateData(telehealthserviceserver, patient1).
+AccurateData(telehealthserviceserver, patient2).
+UpdateRecord(telehealthserviceserver, patient2).
+AccurateData(telehealthserviceserver, patient3).
+~DataNoLongerNecessary(telehealthserviceserver, patient3).

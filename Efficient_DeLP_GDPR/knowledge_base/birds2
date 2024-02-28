@@ -1,0 +1,18 @@
+Bird(opus).
+Penguin(tweety).
+Wings(tweety).
+
+Bird(X) <- Penguin(X).
+
+Fly(X) -< Bird(X).
+~Fly(X) -< Penguin(X).
+
+Wings(tweety).
+Bird(tweety) <- Penguin(tweety).
+Penguin(tweety).
+Fly(tweety) -< Bird(tweety).
+!Fly(opus) -< Penguin(opus).
+Fly(opus) -< Bird(opus).
+!Fly(tweety) -< Penguin(tweety).
+Bird(opus).
+Bird(opus) <- Penguin(opus).

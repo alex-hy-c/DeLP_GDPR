@@ -1,0 +1,43 @@
+PublicInterestCompliance(X, Y) -< DataSubject(Y), DataController(X), ProcessingData(X, Y).
+~PublicInterestCompliance(X, Y)-< DataSubject(Y), DataController(X), PreventingFraud(X, Y).
+
+%all conditions
+~PublicInterestCompliance(X, Y) <- ~GovernmentPurposes(X, Y).
+~PublicInterestCompliance(X, Y) <- ~AdministrationOfJustice(X, Y). 
+~PublicInterestCompliance(X, Y) <- ~ParliamentaryPurposes(X, Y).
+~PublicInterestCompliance(X, Y) <-  ~EqualityOfOportunity(X, Y).
+~PublicInterestCompliance(X, Y) <- ~ForRacialAndEthnicDiversity(X, Y).
+~PublicInterestCompliance(X, Y) <- ~ProtectingPublic(X, Y).
+~PublicInterestCompliance(X, Y) <- ~RegulatoryRequirements(X, Y).
+~PublicInterestCompliance(X, Y) <- ~ForJournalismAcademiaArtLiterature(X, Y).
+~PublicInterestCompliance(X, Y) <- ~SuspicionOfTerroristFinancing(X, Y).
+~PublicInterestCompliance(X, Y) <- ~MoneyLaundering(X, Y).
+~PublicInterestCompliance(X, Y) <- ~SupportIndividualsWithDisability(X, Y).
+~PublicInterestCompliance(X, Y) <- ~Counselling(X, Y).
+~PublicInterestCompliance(X, Y) <- ~SafeguardingChildrenAndIndividuals(X, Y).
+~PublicInterestCompliance(X, Y) <- ~SafeguardingEconomicWellbeing(X, Y).
+~PublicInterestCompliance(X, Y) <- ~Insurance(X, Y).
+~PublicInterestCompliance(X, Y) <- ~OccupationalPensions(X, Y).
+~PublicInterestCompliance(X, Y) <- ~PoliticalParties(X, Y).
+~PublicInterestCompliance(X, Y) <- ~ElectedRepresentativesRespondingRequests(X, Y).
+~PublicInterestCompliance(X, Y) <- ~DisclosureToElectedRepresentatives(X, Y).
+~PublicInterestCompliance(X, Y) <- ~InformingElectedRepresentativesAboutPrisoners(X, Y).
+~PublicInterestCompliance(X, Y) <- ~PublicationOfLegalJudgments(X, Y).
+~PublicInterestCompliance(X, Y) <- ~AntiDopingInSport(X, Y).
+~PublicInterestCompliance(X, Y) <- ~StandardsOfBehaviourInSport(X, Y).
+
+~PublicInterestCompliance(X, Y) -< ~PreventingUnlawfulActs(X, Y).
+PreventingUnlawfulActs(X, Y) <- ~PreventingFraud(X, Y).
+
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+ProcessingData(telehealthserviceserver, patient1).
+~GovernmentPurposes(telehealthserviceserver, patient1).
+ProcessingData(telehealthserviceserver, patient2).
+GovernmentPurposes(telehealthserviceserver, patient2).
+ProcessingData(telehealthserviceserver, patient3).
+PreventingFraud(telehealthserviceserver, patient3).

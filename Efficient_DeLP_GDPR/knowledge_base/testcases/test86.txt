@@ -1,0 +1,128 @@
+A(X, Y) -< DS(Y), DC(X), B1(X, Y).
+~A(X, Y) -< ~D1(X, Y).
+
+~A(X, Y) <- ~B2(X, Y).
+B2(X, Y)-< C1(Y, X).
+C1(Y, X) <- D1(X, Y).
+
+~A(X, Y) <- ~B3(Y, X) .
+
+~A(X, Y) <- B01(X, Y).
+~A(X, Y) <- B02(X, Y). 
+~A(X, Y) <- B03(X, Y).
+~A(X, Y) <- B04(X, Y).
+
+~A(X, Y) <- ~B4(X, Y).
+~A(X, Y) <- B5(X, Y).
+~A(X, Y) <- B6(X, Y).
+~A(X, Y) <- B7(X, Y).
+
+~A(X, Y) <- B8(X, Y).
+~A(X, Y) <- ~B9(X, Y).
+~A(X, Y) <- B10(X, Y).
+~A(X, Y) <- B11(X, Y).
+
+~A(X, Y) <- B16(X, Y).
+~A(X, Y) <- B17(X, Y). 
+~A(X, Y) <- B18(X, Y).
+~A(X, Y) <- ~B19(X, Y).
+
+~A(X, Y) <- B20(X, Y).
+~A(X, Y) <- B21(X, Y).
+~A(X, Y) <- B22(X, Y). 
+~A(X, Y) <- B23(X, Y).
+
+~A(X, Y) <- ~B24(X, Y).
+~A(X, Y) <- B25(X, Y).
+~A(X, Y) <- B26(X, Y).
+~A(X, Y) <- B27(X, Y). 
+
+~A(X, Y) <- B28(X, Y).
+~A(X, Y) <- ~B29(X, Y).
+~A(X, Y) <- B30(X, Y).
+~A(X, Y) <- B31(X, Y).
+
+~A(X, Y) <- B32(X, Y). 
+~A(X, Y) <- B33(X, Y).
+~A(X, Y) <- ~B34(X, Y).
+~A(X, Y) <- B35(X, Y).
+
+~A(X, Y) <- B36(X, Y).
+~A(X, Y) <- B37(X, Y). 
+~A(X, Y) <- B38(X, Y).
+~A(X, Y) <- ~B39(X, Y).
+
+~A(X, Y) <- B40(X, Y).
+~A(X, Y) <- B41(X, Y).
+~A(X, Y) <- B42(X, Y). 
+~A(X, Y) <- B43(X, Y).
+
+~A(X, Y) <- ~B44(X, Y).
+~A(X, Y) <- B45(X, Y).
+~A(X, Y) <- B46(X, Y).
+~A(X, Y) <- ~B441(X, Y).
+
+~A(X, Y) <- B47(X, Y). 
+~A(X, Y) <- B48(X, Y).
+~A(X, Y) <- ~B49(X, Y).
+~A(X, Y) <- B50(X, Y).
+
+~A(X, Y) <- B51(X, Y).
+~A(X, Y) <- B52(X, Y). 
+~A(X, Y) <- B53(X, Y). 
+~A(X, Y) <- ~B54(X, Y).
+
+~A(X, Y) <- B55(X, Y).
+~A(X, Y) <- B56(X, Y).
+~A(X, Y) <- B56(X, Y). 
+~A(X, Y) <- B57(X, Y).
+
+~A(X, Y) <- ~B58(X, Y).
+~A(X, Y) <- B59(X, Y).
+~A(X, Y) <- B60(X, Y).
+~A(X, Y) <- B61(X, Y). 
+
+~A(X, Y) <- B62(X, Y).
+~A(X, Y) <- ~B63(X, Y).
+~A(X, Y) <- B64(X, Y).
+~A(X, Y) <- B65(X, Y).
+
+~A(X, Y) <- B66(X, Y). 
+~A(X, Y) <- B67(X, Y).
+~A(X, Y) <- ~B68(X, Y).
+~A(X, Y) <- B69(X, Y).
+
+~A(X, Y) <- B70(X, Y).
+~A(X, Y) <- B71(X, Y). 
+~A(X, Y) <- B72(X, Y).
+~A(X, Y) <- ~B73(X, Y).
+
+~A(X, Y) <- B74(X, Y).
+~A(X, Y) <- B75(X, Y).
+~A(X, Y) <- B76(X, Y). 
+~A(X, Y) <- B77(X, Y).
+
+~A(X, Y) <- ~B78(X, Y).
+~A(X, Y) <- B79(X, Y).
+~A(X, Y) <- B80(X, Y).
+~A(X, Y) <- B81(X, Y).
+
+
+
+
+
+
+
+
+
+ 
+DS(user1).
+DS(user2).
+DS(user3).
+DC(fitbit).
+B1(fitbit,user1).
+~B2(fitbit, user1).
+B1(fitbit, user2).
+B3(fitbit, user2).
+B1(fitbit, user3).
+~D1(fitbit, user3).

@@ -1,0 +1,19 @@
+Accountability(X, Y) -< DataController(X), DataSubject(Y), ReportDataBreachToSA(X, Y).
+~Accountability(X, Y) -< ~ConsentGiven(X, Y).
+
+~Accountability(X, Y) <- ~ComplainDataBreachToSA(X, Y).
+
+~Accountability(X, Y) <- ProcessData(X, Y).
+ProcessData(X, Y) -< LigitimateInterest(X, Y).
+LigitimateInterest(X, Y) <- ConsentGiven(X, Y).
+ 
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+ReportDataBreachToSA(telehealthserviceserver, patient1).
+~ComplainDataBreach(telehealthserviceserver, patient1).
+ReportDataBreachToSA(telehealthserviceserver, patient2).
+ProcessData(telehealthserviceserver, patient2).
+ReportDataBreachToSA(telehealthserviceserver, patient3).
+~ConsentGiven(telehealthserviceserver, patient3).

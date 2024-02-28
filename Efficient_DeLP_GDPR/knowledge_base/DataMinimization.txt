@@ -1,0 +1,31 @@
+DataMinimizationCompliance(X, Y) -< DataSubject(Y), DataController(X), MinimizedDataCollection(X, Y).
+~DataMinimizationCompliance(X, Y) -<  ~DeleteUnnecessaryData(X, Y).
+
+
+~DataMinimizationCompliance(X, Y) <- ~MinimizedData(X, Y).
+MinimizedData(X, Y) <- DataType(X, Y,"Relevant").
+
+~DataMinimizationCompliance(X, Y) <- ~PurposeLimitation(X, Y).
+PurposeLimitation(X, Y) -< LimitedDataProcessing(X, Y).
+PurposeLimitation(X, Y)  <- PurposeType(X, Y, "Specific").
+LimitedDataProcessing(X, Y) <- DeleteUnnecessaryData(X, Y).
+LimitedDataProcessing(X, Y) <- ExplicitPurpose(X, Y).
+DeleteUnnecessaryData(X, Y) <- RightToErasure(Y).
+
+
+~DataMinimizationCompliance(X, Y) <- DataRetentionPeriod(X, Y).
+DataRetentionPeriod(X, Y) <- RetentionPeriodSpecified(X, Y).
+
+
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+MinimizedDataCollection(telehealthserviceserver, patient1).
+~MinimizedData(telehealthserviceserver, patient1).
+MinimizedDataCollection(telehealthserviceserver, patient2).
+PurposeLimitation(telehealthserviceserver, patient2).
+MinimizedDataCollection(telehealthserviceserver, patient3).
+~DeleteUnnecessaryData(telehealthserviceserver, patient3).

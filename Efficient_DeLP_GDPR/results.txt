@@ -1,0 +1,60 @@
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+UNDECIDED 4324
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+UNDECIDED 3605
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+UNDECIDED 2364
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+YES 36
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+UNDECIDED 3140
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+UNDECIDED 2128
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+UNDECIDED 3017
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+UNDECIDED 8682
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+YES 41
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+YES 38
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+YES 5555
+
+---End of test-cases---
+--------Knowledge Base test-case: test.txt
+Query to Knowledge base: A(fitbit, user1)
+UNDECIDED 3125
+
+---End of test-cases---

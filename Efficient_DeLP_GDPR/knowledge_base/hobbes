@@ -1,0 +1,9 @@
+dangerous(X) -< tiger(X).
+~dangerous(X) -< baby(X).
+~dangerous(X) -< pet(X).
+
+tiger(hobbes).
+baby(hobbes).
+pet(hobbes).
+
+

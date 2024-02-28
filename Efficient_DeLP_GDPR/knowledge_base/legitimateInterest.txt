@@ -1,0 +1,46 @@
+legitimateInterestCompliance(X, Y) -< DataSubject(Y), DataController(X), ProcessingData(X, Y).
+~legitimateInterestCompliance(X, Y) -< DataSubject(Y), DataController(X), OverrideDSRights(X, Y).
+
+%PurposeTest
+~legitimateInterestCompliance(X, Y) <- ~PurposeTest(X, Y).
+
+%NecessityTest
+~legitimateInterestCompliance(X, Y) <- ~NecessityTest(X, Y).
+
+%NecessityTest
+~legitimateInterestCompliance(X, Y) <- ~BalancingTest(X, Y).
+
+~NecessityTest(X, Y) <- ~PurposeTest(X, Y).
+~BalancingTest(X, Y) <- ~NecessityTest(X, Y).
+
+%PurposeTest
+PurposeTest(X, Y)  -< ProcessingPurpose(X, Y, "Clarify").
+~PurposeTest(X, Y)  <- ~ProcessingPurpose(X, Y, "Clarify").
+
+
+%NecessityTest
+NecessityTest(X, Y) -< ProcessingNecessary(X, Y, "demonstrate").
+~NecessityTest(X, Y)  <- ~ProcessingNecessary(X, Y, "demonstrate").
+
+
+%BalancingTest
+BalancingTest(X, Y) -< ProtectFundamentalRights(X, Y).
+ProtectFundamentalRights(X, Y) <- ~OverrideDSRights(X, Y).
+
+~BalancingTest(X, Y) <- ~ProtectFundamentalRights(X, Y).
+
+
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+ProcessingData(telehealthserviceserver, patient1).
+~PurposeTest(telehealthserviceserver, patient1).
+ProcessingData(telehealthserviceserver, patient2).
+NecessityTest(telehealthserviceserver, patient2).
+BalancingTest(telehealthserviceserver, patient2).
+PurposeTest(telehealthserviceserver, patient2).
+ProcessingData(telehealthserviceserver, patient3).
+OverrideDSRights(telehealthserviceserver, patient3).

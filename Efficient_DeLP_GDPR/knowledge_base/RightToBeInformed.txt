@@ -1,0 +1,35 @@
+RightToBeInformedCompliance(X, Y) -< DataSubject(Y), DataController(X), ProcessingData(X, Y).
+~RightToBeInformedCompliance(X, Y) -< DataSubject(Y), DataController(X), ~ProvideClearInformation(X, Y).
+
+%Transparent
+~RightToBeInformedCompliance(X, Y) <- ~Transparent(X, Y).
+Transparent(X, Y) -< ProvideInformation(X, Y).
+ProvideInformation(X, Y) <- ProvideClearInformation(X, Y).
+
+%Fairness
+~RightToBeInformedCompliance(X, Y) <- ~Fairness(X, Y).
+Fairness(X, Y) <- UsageOfData(X, Y, "Inform").
+
+%PurposeLimitaion
+~RightToBeInformedCompliance(X, Y) <- ~PurposeLimitaion(X, Y).
+PurposeLimitaion(X, Y) <- legitimatePurpose(X, Y).
+
+%Consent
+~RightToBeInformedCompliance(X, Y) <- ~Consent(X, Y).
+Consent(X, Y) <- UsageOfData(X, Y, "Understand").
+
+%LegitimateInterests
+~RightToBeInformedCompliance(X, Y) <- ~LegitimateInterests(X, Y).
+LegitimateInterests(X, Y) <- UsageOfData(X, Y, "Understand").
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+ProcessingData(telehealthserviceserver, patient1).
+~Transparent(telehealthserviceserver, patient1).
+ProcessingData(telehealthserviceserver, patient2).
+PurposeLimitaion(telehealthserviceserver, patient2).
+ProcessingData(telehealthserviceserver, patient3).
+~ProvideClearInformation(telehealthserviceserver, patient3).

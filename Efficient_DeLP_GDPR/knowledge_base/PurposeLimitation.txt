@@ -1,0 +1,29 @@
+PurposeLimitationCompliance(X, Y) -< DataSubject(Y), DataController(X), ProcessingData(X, Y).
+~PurposeLimitationCompliance(X, Y) -<  ~MinimizedData(X, Y).
+
+%Transparent
+~PurposeLimitationCompliance(X, Y) <- ~SpecificProcessingContext(X, Y).
+
+~PurposeLimitationCompliance(X, Y) <- ~MinimalDataCollection(X, Y).
+MinimalDataCollection(X, Y) -< DataMinimization(X, Y).
+DataMinimization(X, Y) <- MinimizedData(X, Y).
+
+PurposeLimitationCompliance(X, Y) <- ~DataRetentionPeriod(X, Y).
+DataRetentionPeriod(X, Y) <- RetentionPeriodDefined(X, Y, "Defined").
+
+~PurposeLimitationCompliance(X, Y) <- ~ExplicitPurpose(X, Y).
+ExplicitPurpose(X, Y) <- PurposeType(Y, X, "Explicit").
+
+
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+ProcessingData(telehealthserviceserver, patient1).
+~SpecificProcessingContext(telehealthserviceserver, patient1).
+ProcessingData(telehealthserviceserver, patient2).
+ExplicitPurpose(telehealthserviceserver, patient2).
+ProcessingData(telehealthserviceserver, patient3).
+~MinimizedData(telehealthserviceserver, patient3).

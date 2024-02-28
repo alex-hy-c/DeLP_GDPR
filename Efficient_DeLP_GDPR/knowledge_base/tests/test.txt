@@ -1,0 +1,45 @@
+A(B,C) -< X(B,C),Y(B,C). 
+~A(B,C) -< ~X(B,C),~Z(B,C), T(B,C).
+A(B,C) -< Y(B,C),Z(B,C).
+P(B,C) -< W(B,C), S(B,C).
+
+X(fitbit,user1).
+Z(fitbit,user1).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

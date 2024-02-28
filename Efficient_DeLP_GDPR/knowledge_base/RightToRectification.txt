@@ -1,0 +1,31 @@
+RightToRectificationCompliance(X, Y) -< DataSubject(Y), DataController(X), RespondRequestOfRectification(X, Y).
+~RightToRectificationCompliance(X, Y) -< ~CorrectData(X, Y).
+
+
+~RightToRectificationCompliance(X, Y) <- ~RequestInaccurateDataRectified(Y, X).
+RequestInaccurateDataRectified(Y, X) -< Accuracy(X, Y).
+Accuracy(X, Y) <- CorrectData(X, Y).
+
+~RightToRectificationCompliance(X, Y) <- ~RequestIncompleteDataCompleted(Y, X).
+
+~RightToRectificationCompliance(X, Y) <- ~RepondOnTime(X, Y).
+RepondOnTime(X, Y)-< UndueDelay(X, Y).
+UndueDelay(X, Y) <- MinimumOneMonth(X, Y).
+
+~RightToRectificationCompliance(X, Y) <- ManifestlyUnfoundedRequest(X, Y).
+ManifestlyUnfoundedRequest(X, Y) <- MaliciousRequest(X, Y).
+
+~RightToRectificationCompliance(X, Y) <- ExcessiveRequest(X, Y).
+ExcessiveRequest(X, Y) <- OverlapsWithOtherRequests(X, Y).
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+RespondRequestOfRectification(telehealthserviceserver, patient1).
+~RepondOnTime(telehealthserviceserver, patient1).
+RespondRequestOfRectification(telehealthserviceserver, patient2).
+RequestIncompleteDataCompleted(telehealthserviceserver, patient2).
+RespondRequestOfRectification(telehealthserviceserver, patient3).
+~CorrectData(telehealthserviceserver, patient3).

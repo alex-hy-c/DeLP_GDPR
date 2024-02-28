@@ -1,0 +1,29 @@
+VitalInterestCompliance(X, Y) -< DataSubject(Y), DataController(X), ProcessingData(X, Y).
+~VitalInterestCompliance(X, Y) -< DataSubject(Y), DataController(X), IncapableOfGivingConsent(Y, X).
+
+%HumanitarianEmergency
+~VitalInterestCompliance(X, Y) <- ~HumanitarianEmergency(Y).
+HumanitarianEmergency(Y) <- Death(Y).
+HumanitarianEmergency(Y) <- IncapableOfGivingConsent(Y, X).
+
+%ConditionForProcessing
+~VitalInterestCompliance(X, Y) <- ~ConditionForProcessing(X, Y, "HealthCare").
+
+~VitalInterestCompliance(X, Y) -< ~ExplicitConsent(Y, X).
+ExplicitConsent(Y, X) <- ~IncapableOfGivingConsent(Y, X).
+
+
+
+
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+ProcessingData(telehealthserviceserver, patient1).
+~HumanitarianEmergency(patient1).
+ProcessingData(telehealthserviceserver, patient2).
+ConditionForProcessing(telehealthserviceserver, patient2, "HealthCare").
+ProcessingData(telehealthserviceserver, patient3).
+IncapableOfGivingConsent(patient3, telehealthserviceserver).

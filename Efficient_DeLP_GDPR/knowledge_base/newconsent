@@ -1,0 +1,57 @@
+ConsentCompliance(X, Y) -< DataSubject(Y), DataController(X), ConsentGiven(Y, X).
+~ConsentCompliance(X, Y) -< DataSubject(Y), DataController(X), ~SpecificPurposeConsent(Y, X).
+
+%consentExpired
+~ConsentCompliance(X, Y) <- ConsentExpired(Y, X).
+
+%RevokeConsent
+~ConsentCompliance(X, Y) <-  RevokeConsent(Y, X).
+
+RevokeConsent(Y,X) <- Revoke(Y).
+RevokeConsent(Y, X) <- ConsentExpired(Y, X).
+~RevokeConsent(Y,X) <- ~Revoke(Y).
+~RevokeConsent(Y, X) <- ~ConsentExpired(Y, X).
+
+%ValidConsent
+ValidConsent(X, Y) <- ConsentGiven(Y, X).
+~ValidConsent(X, Y) -< ~ActiveConsent(Y, X).
+~ValidConsent(X, Y) -< ~SpecificPurposeConsent(Y, X),
+~ValidConsent(X, Y) -< ~ExplicitConsent(Y, X).
+
+
+%SpecificPurposeConsent
+SpecificPurposeConsent(Y, X) -< ConsentGiven(Y, X).
+~SpecificPurposeConsent(Y, X)  <- ~PurposeType(Y, X, "Specific").
+
+
+%ActiveConsent
+ActiveConsent(Y, X) -< ConsentGiven(Y, X).
+~ActiveConsent(Y, X) <- ~RevokeConsent(Y, X).
+
+%ExplicitConsent
+ExplicitConsent(Y, X) -< ConsentGiven(Y, X).
+~ExplicitConsent(Y, X) <- ~ConsentType(Y, X, "Explicit").
+
+%InformedConsent
+InformedConsent(X, Y) -< ConsentGiven(Y, X).
+~InformedConsent(X, Y) <- ~ConsentType(Y, X, "FreelyGiven").
+
+%UnambiguousConsent
+UnambiguousConsent(X, Y) -< ConsentGiven(Y, X).
+UnambiguousConsent(X, Y) <- ConsentType(Y, X, "clearly Indicated Consent").
+
+%FreelyGivenConsent
+FreelyGivenConsent(X, Y) -< ConsentGiven(Y, X).
+FreelyGivenConsent(X, Y) <- ConsentType(Y, X, "FreelyGiven").
+
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+ConsentGiven(patient1, telehealthserviceserver).
+ConsentExpired(patient1, telehealthserviceserver).
+ConsentGiven(patient2, telehealthserviceserver).
+ConsentGiven(patient3, telehealthserviceserver).
+~SpecificPurposeConsent(patient3, telehealthserviceserver).

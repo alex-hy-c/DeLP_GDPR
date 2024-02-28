@@ -1,0 +1,22 @@
+more rules = more time linearly
+
+Complexity:
+Rules vs Time(ms):
+Vertical depth: 1, Horizontal depth 1: 33
+Vertical depth: 1, Horizontal depth 2: 35
+Vertical depth: 1, Horizontal depth 3: 39
+Vertical depth: 1, Horizontal depth 4: 54
+Vertical depth: 1, Horizontal depth 5: 83
+Vertical depth: 1, Horizontal depth 6: 243
+Vertical depth: 1, Horizontal depth 7: 930
+Vertical depth: 1, Horizontal depth 8: 5452
+Vertical depth: 1, Horizontal depth 9: 45995
+
+Vertical depth: 1, Horizontal depth 1: 35
+Vertical depth: 26, Horizontal depth 1: 91
+
+Vertical depth: 1, Horizontal depth 2: 43
+Vertical depth: 2, Horizontal depth 2: 47
+Vertical depth: 5, Horizontal depth 2: 760
+Vertical depth: 6, Horizontal depth 2: 2654
+Vertical depth: 7, Horizontal depth 2: 10267

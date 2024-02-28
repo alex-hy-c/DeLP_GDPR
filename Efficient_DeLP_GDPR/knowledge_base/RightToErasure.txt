@@ -1,0 +1,45 @@
+RightToErasure(X, Y) -<  RespondRequestOfErasure(X, Y).
+~RightToErasure(X, Y) -< ~DataNoLongerNecessary(X, Y).
+
+
+~RightToErasure(X, Y) <- ~RightToBeforgotten(X, Y).
+RightToBeforgotten(X, Y)-< WithdrawConsent(Y, X).
+WithdrawConsent(Y, X) <- DataNoLongerNecessary(X, Y).
+
+~RightToErasure(X, Y) <- ~ObjectDataProcessing(Y, X).
+RightToErasure(Y, X) <- ProcessForMarketingPurposes(X, Y).
+RightToErasure(Y, X) <- ProcessUnlawfull(X, Y).
+RightToErasure(Y, X) <- ~overridingLegitimateInterest(X, Y).
+
+~RightToErasure(X, Y) <- ~ProcessChildData(X, Y).
+~RightToErasure(X, Y) <- RightOfFreedomOfExpression(X, Y).
+~RightToErasure(X, Y) <- ComplyLegalObligation(X, Y).
+
+~RightToErasure(X, Y) <- PublicInterest(X, Y).
+PublicInterest(X, Y) <- PublicHealthPurposes(X, Y).
+PublicInterest(X, Y) <- ProcessDataForSocialCare(X, Y). 
+
+~RightToErasure(X, Y) <- ManifestlyUnfoundedRequest(X, Y).
+ManifestlyUnfoundedRequest(X, Y) <- MaliciousRequest(X, Y).
+
+~RightToErasure(X, Y) <- ExcessiveRequest(X, Y).
+ExcessiveRequest(X, Y) <- OverlapsWithOtherRequests(X, Y).
+
+
+~RightToErasure(X, Y) <- ~RepondOnTime(X, Y).
+RightToErasure(X, Y) -< UndueDelay(X, Y).
+RightToErasure(X, Y) <- MinimumOneMonth(X, Y).
+
+
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+RespondRequestOfErasure(telehealthserviceserver, patient1).
+~RightToBeforgotten(telehealthserviceserver, patient1).
+RespondRequestOfErasure(telehealthserviceserver, patient2).
+ObjectDataProcessing(telehealthserviceserver, patient2).
+RespondRequestOfErasure(telehealthserviceserver, patient3).
+~DataNoLongerNecessary(telehealthserviceserver, patient3).

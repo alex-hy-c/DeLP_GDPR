@@ -1,0 +1,34 @@
+RightOfAccessCompliance(X, Y) -< DataSubject(Y), DataController(X), RespondSubjectAccessRequest(X, Y).
+~RightOfAccessCompliance(X, Y) -< DataSubject(Y), DataController(X), ~MinimumOneMonth(X, Y).
+
+
+~RightOfAccessCompliance(X, Y) <- ~ProvideRequestedInformaiton(X, Y).
+RightOfAccessCompliance(X, Y) <- PersonalData(Y).
+
+~RightOfAccessCompliance(X, Y) <- ~AppropriateInformaitonformat(X, Y).
+~RightOfAccessCompliance(X, Y) <- ~ThirdPartyRequest(X, Y).
+
+
+~RightOfAccessCompliance(X, Y) <- ~RepondOnTime(X, Y).
+RepondOnTime(X, Y) -< UndueDelay(X, Y).
+UndueDelay(X, Y) <- MinimumOneMonth(X, Y).
+
+~RightOfAccessCompliance(X, Y) <- ManifestlyUnfoundedRequest(X, Y).
+ManifestlyUnfoundedRequest(X, Y) <- MaliciousRequest(X, Y).
+
+~RightOfAccessCompliance(X, Y) <- ExcessiveRequest(X, Y).
+ExcessiveRequest(X, Y) <- OverlapsWithOtherRequests(X, Y).
+
+
+
+
+DataSubject(patient1).
+DataSubject(patient2).
+DataSubject(patient3).
+DataController(telehealthserviceserver).
+RespondSubjectAccessRequest(telehealthserviceserver, patient1).
+~ProvideRequestedInformaiton(telehealthserviceserver, patient1).
+RespondSubjectAccessRequest(telehealthserviceserver, patient2).
+ProvideRequestedInformaiton(telehealthserviceserver, patient2).
+RespondSubjectAccessRequest(telehealthserviceserver, patient3).
+~MinimumOneMonth(telehealthserviceserver, patient3).

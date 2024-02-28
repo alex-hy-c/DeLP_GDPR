@@ -1,0 +1,29 @@
+A(X, Y) -< DS(Y), DC(X), B1(X, Y).
+~A(X, Y) -< ~D1(X, Y).
+
+~A(X, Y) <- ~B2(X, Y).
+B2(X, Y)-< C1(Y, X).
+C1(Y, X) <- D1(X, Y).
+
+~A(X, Y) <- ~B3(Y, X) .
+
+~A(X, Y) <- B01(X, Y).
+~A(X, Y) <- B02(X, Y). 
+~A(X, Y) <- B03(X, Y).
+~A(X, Y) <- B04(X, Y).
+
+~A(X, Y) <- ~B4(X, Y).
+~A(X, Y) <- B5(X, Y).
+~A(X, Y) <- B6(X, Y).
+~A(X, Y) <- B7(X, Y).
+ 
+DS(user1).
+DS(user2).
+DS(user3).
+DC(fitbit).
+B1(fitbit,user1).
+~B2(fitbit, user1).
+B1(fitbit, user2).
+B3(fitbit, user2).
+B1(fitbit, user3).
+~D1(fitbit, user3).
